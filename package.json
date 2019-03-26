@@ -5,12 +5,12 @@
     "node": "6.2.0"
   },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "client-install": "npm install --prefix client",
+    "build": "webpack --mode production",
+    "start": "npm run build && node server.js",
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
@@ -18,11 +18,30 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "7.4.0",
+    "babel-polyfill": "6.26.0",
     "bufferutil": "1.2.1",
     "concurrently": "4.1.0",
+    "css-loader": "2.1.1",
     "express": "4.13.4",
+    "file-loader": "3.0.1",
     "nodemon": "1.18.10",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
+    "style-loader": "0.23.1",
+    "url-loader": "1.1.2",
     "utf-8-validate": "1.2.1",
+    "webpack": "4.29.6",
     "ws": "1.1.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "@babel/preset-react": "7.0.0",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
+    "html-webpack-plugin": "3.2.0",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.2.1"
   }
 }
