@@ -1,5 +1,5 @@
 {
-  "name": "websockets-vanilla",
+  "name": "amaizo",
   "version": "1.0.0",
   "engines": {
     "node": "6.2.0"
@@ -7,7 +7,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm run build && node server.js",
+    "start": "npm run webpack --mode production && node server.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
