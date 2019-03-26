@@ -7,7 +7,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm run webpack --mode production && node server.js",
+    "start": "--mode production && node server.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
