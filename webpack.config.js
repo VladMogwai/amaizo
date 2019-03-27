@@ -1,13 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const outputDirectory = 'dist';
 
 module.exports = {
-  entry: ['babel-polyfill', './client/src/index.js'],
+  entry: ['babel-polyfill', './src/client/src/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
     filename: 'bundle.js'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   module: {
     rules: [
@@ -39,9 +45,9 @@ module.exports = {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico'
+      template: './public/index.html'
     })
   ]
 };
