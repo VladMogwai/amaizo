@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import vampireImg from '../../static/images/vampire.jpg';
 
 const styles = {
   card: {
@@ -29,7 +30,7 @@ function ImgMediaCard(props) {
           alt="vampire"
           className={classes.media}
           height="140"
-          image="src/client/static/images/vampire.jpg"
+          image={vampireImg}
           title="vampire"
         />
         <CardContent>
