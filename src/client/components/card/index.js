@@ -31,7 +31,7 @@ function ImgMediaCard(props) {
             component="img"
             alt="nosferatu"
             className={classes.media}
-            height="140"
+            height="1125"
             image={nosferatuImg}
             title="nosferatu"
           />
