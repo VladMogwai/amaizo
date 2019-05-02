@@ -57,7 +57,7 @@
     "start": "npm i && webpack --mode production",
     "prettier": "prettier-eslint --write \"src/**/*.+(js|jsx)\"",
     "prettier-dry-run": "prettier-eslint \"src/**/*.+(js|jsx)\" -l debug",
-    "heroku-postbuild": "webpack --mode production"
+    "heroku-postbuild": "npm i && webpack --mode production"
   },
   "browserslist": [
     ">0.2%",
