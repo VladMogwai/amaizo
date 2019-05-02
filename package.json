@@ -2,50 +2,19 @@
   "name": "amaizo",
   "version": "1.0.0",
   "engines": {
-    "node": "6.2.0"
+    "node": "11.x"
   },
   "description": "",
   "main": "src/server/index.js",
   "scripts": {
     "start": "webpack --mode production && node src/server/index.js",
+    "test-run": "concurrently \"cd src/server && npm start\" \"cd src/client && npm start\"",
     "build": "webpack --mode production",
-    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-    "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "webpack --mode production"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "7.4.0",
-    "@material-ui/core": "3.9.2",
-    "@material-ui/icons": "3.0.2",
-    "babel-polyfill": "6.26.0",
-    "bufferutil": "1.2.1",
-    "concurrently": "4.1.0",
-    "css-loader": "2.1.1",
-    "express": "4.13.4",
-    "nodemon": "1.18.10",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
-    "react-router-dom": "5.0.0",
-    "style-loader": "0.23.1",
-    "url-loader": "1.1.2",
-    "utf-8-validate": "1.2.1",
-    "webpack": "4.29.6",
-    "ws": "1.1.0"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "7.4.0",
-    "@babel/preset-env": "7.4.2",
-    "@babel/preset-react": "7.0.0",
-    "babel-eslint": "10.0.1",
-    "babel-loader": "8.0.5",
-    "clean-webpack-plugin": "2.0.1",
-    "file-loader": "3.0.1",
-    "html-webpack-plugin": "3.2.0",
-    "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.2.1"
+    "concurrently": "4.1.0"
   }
 }
