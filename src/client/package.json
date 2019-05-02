@@ -54,7 +54,7 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
-    "start": "webpack --mode production",
+    "start": "npm i && webpack --mode production",
     "prettier": "prettier-eslint --write \"src/**/*.+(js|jsx)\"",
     "prettier-dry-run": "prettier-eslint \"src/**/*.+(js|jsx)\" -l debug"
   },
