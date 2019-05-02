@@ -4,7 +4,7 @@
     "node": "11.x"
   },
   "scripts": {
-    "start": "npm i && node index.js",
+    "start": "node index.js",
     "playground": "prisma playground",
     "dev": "npm-run-all --parallel start playground",
     "prisma": "prisma"
