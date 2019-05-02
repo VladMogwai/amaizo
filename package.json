@@ -8,7 +8,7 @@
   "main": "src/server/index.js",
   "scripts": {
     "start": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\"",
-    "heroku-postbuild": "concurrently \"cd src/server && npm start\" \"cd src/client && npm start\""
+    "heroku-postbuild": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\""
   },
   "author": "",
   "license": "ISC",
