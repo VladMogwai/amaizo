@@ -4,8 +4,7 @@
     "node": "11.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "npm i && node index.js",
+    "start": "npm i && node index.js",
     "playground": "prisma playground",
     "dev": "npm-run-all --parallel start playground",
     "prisma": "prisma"
