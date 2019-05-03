@@ -7,7 +7,7 @@ const os = require('os')
 const path = require('path')
 const app = express()
 
-app.use('/', express.static(path.join(__dirname, '../../', 'dist')))
+app.use('/', express.static(path.join(__dirname, '../', 'dist')))
 
 app.get('/api/getUsername', (req, res) =>
   res.send({ username: os.userInfo().username }),
