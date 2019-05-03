@@ -7,8 +7,10 @@
   "description": "",
   "main": "src/server/index.js",
   "scripts": {
-    "start": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\"",
-    "heroku-postbuild": "concurrently \"cd src/server && npm start\" \"cd src/client && npm start\""
+    "install": "npm run install-client && npm run install-server",
+    "install-client": "cd src/client && npm run install",
+    "install-server": "cd src/server && npm run install",
+    "dev": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\""
   },
   "author": "",
   "license": "ISC",
