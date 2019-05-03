@@ -10,7 +10,8 @@
     "install": "npm run install-client && npm run install-server",
     "install-client": "cd src/client && npm i",
     "install-server": "cd src/server && npm i",
-    "dev": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\""
+    "dev": "concurrently \"cd src/server && npm i && npm start\" \"cd src/client && npm i && npm start\"",
+    "heroku-postbuild": "concurrently \"cd src/server && npm start\" \"cd src/client && npm start\""
   },
   "author": "",
   "license": "ISC",
