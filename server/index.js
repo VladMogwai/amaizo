@@ -1,18 +1,34 @@
-/* const { GraphQLServer } = require('graphql-yoga')
+const { GraphQLServer } = require('graphql-yoga')
 const { Prisma } = require('prisma-binding')
-const resolvers = require('./src/resolvers') */
+const resolvers = require('./src/resolvers')
 
-const express = require('express')
-const os = require('os')
-const path = require('path')
-const app = express()
+const server = new GraphQLServer({
+  typeDefs: 'schema.graphql',
+  resolvers,
+  context: req => ({
+    ...req,
+    db: new Prisma({
+      typeDefs: 'generated-schema.graphql',
+      endpoint: 'http://localhost:4466/naperg/dev',
+    }),
+  }),
+})
 
-app.use('/', express.static(path.join(__dirname, '../', 'dist')))
+const options = {
+  // playground: null, // Dissable playground endpoint,
+}
 
-app.get('/api/getUsername', (req, res) =>
-  res.send({ username: os.userInfo().username }),
-)
+server.express.get(server.options.endpoint + 'user', (req, res, done) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.status(200).json({
+    message: 'Message from graphql-yoga (Express API)',
+    obj: 'You can use graphql-yoga as a simple REST API',
+  })
+})
 
-app.listen(process.env.PORT || 5000, () =>
-  console.log(`Listening on port ${process.env.PORT || 5000}!`),
-)
+server.listen(process.env.PORT || 5000, function() {
+  console.log('listening on *:5000')
+})
+server.start(options, () => {
+  console.log('Server is running on http://localhost:4000')
+})

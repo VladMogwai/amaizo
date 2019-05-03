@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './App.css';
-import Header from '../components/appbar';
-import Card from '../components/card';
+import Header from './components/appbar';
+import Card from './components/card';
 
 const theme = createMuiTheme({
   overrides: {

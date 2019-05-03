@@ -31,22 +31,20 @@ function ImgMediaCard(props) {
             component="img"
             alt="nosferatu"
             className={classes.media}
-            height="140"
+            height="1400"
             image={nosferatuImg}
             title="nosferatu"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Sabbat
+              Nosferatu
             </Typography>
             <Typography component="p">
-              The most visibly cursed of all Kindred, the Embrace warps each
-              Nosferatu into a hideously deformed creature; the archetypal
-              Nosferatu resembles Max Shreck's Count Orlok, though the curse has
-              any number of variations. The Nosferatu are the spymasters of the
-              dead, collecting information and selling it for a dear price. They
-              are also the masters of the underground, living in the sewers for
-              protection.
+              The most visibly cursed of all Kindred, the Embrace warps each Nosferatu into a
+              hideously deformed creature; the archetypal Nosferatu resembles Max Shreck's Count
+              Orlok, though the curse has any number of variations. The Nosferatu are the spymasters
+              of the dead, collecting information and selling it for a dear price. They are also the
+              masters of the underground, living in the sewers for protection.
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -71,10 +69,9 @@ function ImgMediaCard(props) {
               Sabbat
             </Typography>
             <Typography component="p">
-              The Sabbat is a loose organization of Cainites who reject the
-              Traditions. Unlike the Camarilla, the Sabbat believes in the
-              Antediluvians and Caine. Also known as the Sword of Caine, as they
-              believe they will be the army Caine will use to destroy the
+              The Sabbat is a loose organization of Cainites who reject the Traditions. Unlike the
+              Camarilla, the Sabbat believes in the Antediluvians and Caine. Also known as the Sword
+              of Caine, as they believe they will be the army Caine will use to destroy the
               Antediluvians once Gehenna arrives.
             </Typography>
           </CardContent>
