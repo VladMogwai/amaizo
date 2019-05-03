@@ -9,7 +9,7 @@
   "scripts": {
     "install": "(cd client && npm i) && (cd server && npm i)",
     "start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
-    "heroku-postbuild": "concurrently \"cd client && npm start\" \"cd server && npm start\""
+    "heroku-postbuild": "npm run start"
   },
   "author": "",
   "license": "ISC",
