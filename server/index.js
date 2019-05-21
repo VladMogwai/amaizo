@@ -9,7 +9,7 @@ const server = new GraphQLServer({
     ...req,
     db: new Prisma({
       typeDefs: 'generated-schema.graphql',
-      endpoint: 'http://localhost:4466/naperg/dev',
+      endpoint: 'http://localhost:8000',
     }),
   }),
 })
@@ -26,9 +26,6 @@ server.express.get(server.options.endpoint + 'user', (req, res, done) => {
   })
 })
 
-server.listen(process.env.PORT || 5000, function() {
-  console.log('listening on *:5000')
-})
 server.start(options, () => {
   console.log('Server is running on http://localhost:4000')
 })

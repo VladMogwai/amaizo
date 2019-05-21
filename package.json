@@ -5,10 +5,10 @@
     "node": "11.x"
   },
   "description": "",
-  "main": "server/index.js",
+  "main": "media/app.js",
   "scripts": {
-    "install": "(cd client && npm i) && (cd server && npm i)",
-    "start": "(cd client && npm start) && (cd server && npm start)"
+    "install": "(cd client && npm i) && (cd server && npm i) && (cd media && npm i)",
+    "start": "(cd client && npm start) && (cd server && npm start) && (cd media && npm start)"
   },
   "author": "",
   "license": "ISC",
